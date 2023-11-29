@@ -1,0 +1,437 @@
+/*Esta parte del código es la que hace funcionar el carrete*/
+.diapositivas {
+    position: fixed;
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    z-index: -1;
+}
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+.diapositivas ul {
+    display: flex;
+    padding: 0%;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+.diapositivas li {
+    list-style: none;
+    width: 100%;
+}
+.diapositivas img {
+    width: 100%;
+    height: 100%;
+}
+/*Aquí termina el código del carrete*/
+
+#banner {
+    background-color: rgb(205, 121, 32);
+    right: 0%;
+    top: 0%;
+    width: 100%;
+    height: 84px;
+    position: fixed;
+    z-index: 9999;
+}
+#landing_text {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    position: relative;
+    width: 100%;
+    top: 64px;
+    left: -1%;
+    background: rgba(54, 54, 54, 0.45);
+    border: 10px white;
+}
+#yo_haciendo_pizza {
+
+    width: 15%;
+    height: 0%;
+    float: left;
+}
+#mi_pizza {
+    width: 20%;
+    float: right;
+}
+#logo {
+    width: 7%;
+    float: left;
+    margin-top: -10px;
+}
+#nombreEmpresa {
+    font-family: 'Josefin Sans';
+    font-size: xx-large;
+}
+/* Mi parte pro, menú */
+html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.content {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0; /* Para fijar el menú en la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding-left: 30rem; /* Asegura que el menú esté por encima de otros elementos */
+}
+.content .list-menu{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.content .list-menu li a{
+    padding: 3rem 1rem 2rem 1rem;
+    color: aliceblue;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 200ms ease-in;
+}
+.content .list-menu li a:hover{
+    background-color: #3333;
+    border-bottom: 4px solid #ffc506;
+    color: #ffc506;
+}
+.firts-section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    position: relative;
+    background-size: cover;
+    background:  rgba(8, 5, 7, 0.70);
+    left: -1%;
+    
+    
+}
+.firts-section .contenido-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.firts-section h1{
+    color: #ffc506;
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.firts-section h2{
+    color: rgba(177, 177, 177);
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.btn button{
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #ffc506;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    transition: all 400ms ease-in;
+}
+.btn button:hover{
+    border: 1px solid #ffc506;
+    background-color: transparent;
+    color: #ffc506;
+}
+.btn{
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+}
+/* Menu de pizzas */
+
+.menu{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    background-color: rgb(12, 12, 12, 0.9);
+    background-size: cover;
+    margin-top: 80px;
+    margin-left: -8px;
+}
+
+.menu h2{
+    font-size: 5rem;
+    color: azure;
+    text-transform: uppercase;
+}
+
+.items-menu{
+     width: 80%;
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 550px));
+     justify-content: center;
+     align-items: center;
+     gap: 30px;
+}
+
+.items-menu .info{
+    background-color: rgba(221, 221, 221);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+.items-menu .info h3{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+.items-menu .info h4{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 150px 150px;
+    margin-left: 6rem;
+}
+.items-menu .info h4 span{
+    font-size: 1.6rem;
+    color: rebeccapurple;
+    margin-left: 1.5rem ;
+    text-decoration: underline;
+}
+
+.items-menu div{
+    background-color: #ffc506;
+    box-shadow: 0px 0px 4px 2px ;
+}
+
+.items-menu img{
+    width: 100%;
+    height: 200px;
+}
+
+.items-menu .info .pedir .botton_modal{
+    width: 200px;
+    height: 35px;
+    margin-top: 0.5rem;
+    background-color: #ffc506;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+    transition: all 200ms ease-in;
+}
+
+.items-menu .info .pedir:hover{
+    background-color: mediumpurple;
+    color: white;
+}
+/* Contatos y Ayuda (pie de pagina) */
+
+.contactosyayuda{
+    width: 100%;
+    background-color: #1f1e1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    padding-bottom: 4rem;
+    margin-left: -8px;
+}
+
+.contactosyayuda h3{
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    font-family: 'Josefin Sans';
+    
+}
+
+.contactos-seccion{
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.contactos-seccion i{
+    margin-right: 1rem;
+}
+
+.contactos-seccion div{
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.contactos-seccion div:hover{
+    color: #ffc506;
+}
+
+footer{
+    height: 25px;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -8px;
+}
+
+#tittle_contactos {
+    position: relative;
+    top: 50px;
+}
+/*flexbox de contactos*/
+.flex_ubic {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ubic {
+    background-color: bisque;
+    width: 33%;
+    height: 33%;
+    border: solid grey 1px;
+    margin: 1px;
+    text-align: center;
+}
+#body_contactos {
+    background-color: rgb(244, 190, 123);
+}
+/*función del botón y ventana emergente*/
+.botton_modal {
+    padding: 40px;
+}
+.botton_modal label {
+    padding: 7px 10px;
+    background-color: #ffc506;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.botton_modal label:hover {
+    background-color: mediumpurple;
+}
+.container_modal {
+    background-color: rgba(144, 148, 150, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+#btn-modal {
+    display: none;
+}
+#btn-modal:checked ~ .container_modal {
+    display: flex;
+}
+.content_modal {
+    background-color: white;
+    width: 40%;
+    height: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    left: 29%;
+    top: 25%;
+}
+.container_modal .fin_botton_modal {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.container_modal .fin_botton_modal label {
+    padding: 7px 10px;
+    background-color: #ffc506;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.container_modal .fin_botton_modal label:hover {
+    background-color: mediumpurple;
+}
+.fin_modal_window {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+/*Código de los tabs*/
+#pestanas {
+    float: top;
+    font-size: 3ex;
+    font-weight: bold;
+}
+
+#pestanas ul{
+    margin-left: -40px;    
+}
+
+#pestanas li{
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    margin: 0px 2px -2px -0px;
+    background: #ffc506;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid bisque;
+    border-bottom: dimgray;
+    padding: 0px 20px 0px 20px;
+}
+
+#pestanas a:link{
+    text-decoration: none;
+    color: white;
+}
+
+#contenidopestanas{
+    clear: both;  
+    background: dimgray;
+    padding: 20px 0px 20px 20px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border: 2px solid bisque;
+    width: 95%;
+}

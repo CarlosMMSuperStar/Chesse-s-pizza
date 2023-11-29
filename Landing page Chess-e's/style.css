@@ -1,0 +1,102 @@
+/* Sobre nosotros */
+.sobre-nosotros{
+    background-color: #1f1e1f;
+    width: 100%;
+    padding-bottom: 5rem;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -8px;
+}
+.sobre-nosotros img{
+    width: 400px;
+    height: 400px;
+    margin-top: 10rem;
+    margin-left: 10rem;
+    border: 2px solid rgba(155, 155, 155);
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+.contentsobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    margin-top: 3rem;
+}
+.contentsobre h2{
+    font-size: 6rem;
+    margin-bottom: 2rem;
+
+}
+.contentsobre p{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(255, 165, 0, 0.3);  
+    backdrop-filter: blur(10px); 
+
+}
+.carteles {
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    
+}
+
+.image img {
+    width: 50%;
+    transition: transform 0.5s ease;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 52.5%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+.image:hover .overlay {
+    opacity: 1;
+}
+#galery_2 {
+    top: -100px;
+}
